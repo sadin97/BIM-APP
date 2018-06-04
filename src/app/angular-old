@@ -1,0 +1,24 @@
+<div>
+  <input type="text" [ngModel]="title" (ngModelChange)="changeTitle">
+  <p>Demo {{title}}</p>
+  <ul *ngIf="show">
+    <li *ngFor="let i of arr">{{i}}</li>
+    <hr>
+    <li *ngFor="let i of arr; let j = index">{{j}} {{i}}</li>
+  </ul>
+
+  <button (click)="show = !show">Promijeni</button>
+
+  <p class="text" [ngClass]="{'text' : show}">Test</p> <!-- ngClass dodajemo klasu nekoj varijabli.-->
+</div>
+
+<!--
+
+life cycle management
+
+nginit
+ngcreate...
+
+-->
+
+<app-show-input></app-show-input>
