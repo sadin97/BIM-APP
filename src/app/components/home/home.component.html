@@ -1,25 +1,30 @@
-<div class="sub-header">
-  <div class="tabs">
-    <button (click)="switchTabs('active')">Active</button>
-    <button (click)="switchTabs('archive')">Archive</button>
+<div class="wrapper">
+  <div class="sub-header">
+    <div class="tabs">
+      <button (click)="switchTabs('active')" class="buttonleft">Active</button>
+      <button (click)="switchTabs('archive')" class="buttonleft">Archive</button>
+    </div>
+
+    <div class="addprojectbutton">
+      <button (click)="createProject()" class="buttonblue">Create project</button>
+    </div>
+
+
   </div>
 
-  <div>
-    <button (click)="createProject()">Create project</button>
-  </div>
+  <div class="content">
 
-  <div>
-    <input class="search" type="text" [(ngModel)]='searchText'>
-  </div>
-</div>
-
-<div class="content">
-  {{currentTab}}
-  {{search}}
-  <div class="project-box"
-    *ngFor="let project of projects | search:[searchText]">
-      <!--<div *ngIf="project.name === search">-->
-        <h4>{{project.name}}</h4>
-      <!--</div>-->
+    {{search}}
+    <div class="search-bar">
+      <input class="search" type="text" [(ngModel)]='searchText'>
+    </div>
+    <div class="projects_container">
+      <div class="project-box"
+        *ngFor="let project of projects | search:[searchText]">
+          <!--<div *ngIf="project.name === search">-->
+            <h4>{{project.name}}</h4>
+          <!--</div>-->
+      </div>
+    </div>
   </div>
 </div>

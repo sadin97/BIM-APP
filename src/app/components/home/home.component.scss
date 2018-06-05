@@ -1,18 +1,97 @@
-$gray-background: #cdcdcd;
+$content_color: #d8d8d8;
 
 .content {
-  background-color: $gray-background;
-  display: flex;
-  flex-grow: 3;
+  background-color: $content_color;
+  margin: 5px;
+  border-radius: 5px;
 
-  .project-box {
-    border: 1px solid #b9b9b9;
-    padding: 10px;
-    margin: 10px;
-    width: calc((100% / 3) - 20px);
-    border-radius: 4px;
-    background-color: #8a8a8a;
-    color: #fff;
+  .projects_container {
 
+    display: flex;
+
+    .project-box {
+      border: 1px solid #b9b9b9;
+      padding: 10px;
+      margin: 10px;
+      width: calc((100% / 3) - 20px);
+      border-radius: 4px;
+      background-color: #8a8a8a;
+      color: #fff;
+    }
   }
+
+  .c-tab {
+    height: 20px;
+    line-height: 20px;
+  }
+  .search-bar {
+    padding: 20px;
+  }
+}
+
+// #############################################################################################
+
+.wrapper {
+  width: 1200px;
+  background-color: #bbb;
+  margin: 0 auto;
+  padding-bottom: 5px;
+  border-radius: 5px;
+}
+
+.sub-header {
+  width: 1200px;
+  border-bottom: 1px solid #d8d8d8;
+  height: 40px;
+  margin-top: 15px;
+}
+
+.tabs {
+  float: left;
+}
+
+.addprojectbutton {
+  float: right;
+}
+
+input.search {
+  width: 100%;
+  height: 25px;
+  margin: 0 auto;
+  padding-left: 6px;
+  color: #444;
+}
+
+button.buttonleft {
+  background-color: #d0d0d0;
+  color: #111;
+  padding: 3px 20px 3px 20px;
+  margin-left: 10px;
+  margin-top: 8px;
+  border: 1px solid #8a8a8a;
+  border-radius: 5px;
+}
+
+button.buttonleft:hover {
+  background-color: #8a8a8a;
+  color: #fff;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+button.buttonblue {
+  background-color: #48add4;
+  color: #111;
+  padding: 3px 20px 3px 20px;
+  margin-right: 10px;
+  margin-top: 8px;
+  border: 1px solid #616161;
+  border-radius: 5px;
+}
+
+button.buttonblue:hover {
+  background-color: #8a8a8a;
+  color: #fff;
+  transition: 0.3s;
+  cursor: pointer;
 }
