@@ -9,14 +9,17 @@ $content_color: #d8d8d8;
 
     display: flex;
 
+    flex-wrap: wrap;
+
     .project-box {
       border: 1px solid #b9b9b9;
       padding: 10px;
       margin: 10px;
-      width: calc((100% / 3) - 20px);
+      width: calc((100% / 4) - 20px);
       border-radius: 4px;
       background-color: #8a8a8a;
       color: #fff;
+      flex-grow: 1;
     }
   }
 

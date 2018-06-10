@@ -6,15 +6,13 @@ import { find, result } from 'lodash'
 })
 export class SearchPipe implements PipeTransform {
 
-  transform(value: any, args?: any): any {
-    return value.filter(item => {
-       // return find(value, ['name', args[0].toLowerCase()])
-       if (args[0] === '') {
-        return value;
-       } else {
-        return item.name.toLowerCase() === args[0].toLowerCase() ? item : undefined
-       }
-    });
+  transform(value: any, args: any[]) {
+    if (args[1]) {
+      return value.filter(function (el: any) {
+        return el[args[0]].toLowerCase().indexOf(args[1].toLowerCase()) > -1;
+      });
+    }
+    return value;
   }
 
 }

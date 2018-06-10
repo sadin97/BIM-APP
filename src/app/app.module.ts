@@ -14,6 +14,7 @@ import { AboutComponent } from './components/about/about.component';
 import { AboutModule } from './components/about/about.module';
 import { ContactComponent } from './components/about/contact/contact.component';
 import { SearchPipe } from './filters/search.pipe';
+import { ItemDetailsComponent } from './shared/item-details/item-details.component';
 
 const appRoutes: Routes = [
   { path: 'home', component: HomeComponent }, // Path mozemo nazvati kako god zelimo.
@@ -28,7 +29,8 @@ const appRoutes: Routes = [
     SharedComponent,
     HeaderComponent,
     AboutComponent,
-    SearchPipe
+    SearchPipe,
+    ItemDetailsComponent
   ],
   imports: [
     BrowserModule,

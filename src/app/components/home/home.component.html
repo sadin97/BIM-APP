@@ -13,18 +13,16 @@
   </div>
 
   <div class="content">
-
+    {{currentTab}}
     {{search}}
     <div class="search-bar">
       <input class="search" type="text" [(ngModel)]='searchText'>
     </div>
     <div class="projects_container">
-      <div class="project-box"
-        *ngFor="let project of projects | search:[searchText]">
-          <!--<div *ngIf="project.name === search">-->
-            <h4>{{project.name}}</h4>
-          <!--</div>-->
-      </div>
+      <app-item-details
+        *ngFor="let project of projects | search:[searchText]"
+        [item]="project">
+      </app-item-details>
     </div>
   </div>
 </div>
